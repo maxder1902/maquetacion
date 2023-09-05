@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <title>Maquetacion</title>
+
+    <style>
+        /*Aqui definimos las variables y colores que se usan en todo el documento*/
+        :root {
+            --inmovalley-primario: rgb(24, 29, 35);
+            --inmovalley-secundario: rgb(150, 133, 17);
+            color: rgb(252, 255, 255);
+            
+
+        }
+        .navbar {
+            background-color: var(--inmovalley-primario) ;
+        }
+
+        .nav-item.home {
+            background-color: var(--inmovalley-secundario);
+        }
+
+        .nav-item a {
+            color: rgb(252, 255, 255);
+        }
+
+        .hero-section {
+            background-image:  linear-gradient(to bottom, rgba(51, 51, 51, 0.5), rgba(17, 17, 17, 0.8)), url('Assets/slider.jpg'); /* Reemplaza 'tu-imagen-de-fondo.jpg' con la ruta de tu imagen de fondo */
+            background-size: cover;
+            background-position: center;
+            color: #ffffff;
+            padding: 100px 0;
+            text-align: center;
+            height: 33em
+            
+        }
+
+
+        .hero-text {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        /* Estilos para el formulario */
+        .property-search-form {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .form-control {
+            width: 200px;
+            margin-right: 10px;
+        }
+
+        .boton-buscar {
+            background-color: var(--inmovalley-secundario) ;
+            border: none;
+            cursor: pointer;
+        }
+
+        .boton-limpiar {
+            background-color: #515151 ;
+            border: none;
+            cursor: pointer;
+        }
+
+        .boton-busqueda-avanzada {
+            background-color: var(--inmovalley-secundario) ;
+            border: none;
+            cursor: pointer;
+        }
+
+        .boton-wrapper {
+            display: flex;
+        }
+
+        /*texto vertical*/
+
+        .texto-vertical {
+            writing-mode: vertical-lr;
+            transform: rotate(180deg);
+        }
+
+        .boton-enviar{
+            background-color: var(--inmovalley-primario);
+            border: none;
+            cursor: pointer;
+
+        }
+
+        footer {
+            background-color: var(--inmovalley-primario);
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            
+            <!-- Botón de hamburguesa para menú desplegable (no implementado) -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <!-- Enlaces en la parte izquierda -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item home">
+                        <a class="nav-link" href="#">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Propiedades</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Vender</a>
+                    </li>
+                </ul>
+
+                <a class="navbar-brand" href="#">INMOVALLEY</a>
+
+                
+                <!-- Botones y elementos en la parte derecha -->
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Valora tu propiedad</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contactar</a>
+                    </li>
+                    <li class="nav-item">
+                        <!-- Icono de corazón (usar un ícono de corazón aquí) -->
+                        <a class="nav-link" href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25.441" height="22.189" viewBox="0 0 25.441 22.189">
+                                <path id="Icon_feather-heart" data-name="Icon feather-heart" d="M25.8,6.459a6.694,6.694,0,0,0-9.469,0l-1.29,1.29-1.29-1.29a6.7,6.7,0,1,0-9.469,9.469l1.29,1.29,9.469,9.469,9.469-9.469,1.29-1.29a6.694,6.694,0,0,0,0-9.469Z" transform="translate(-2.323 -4.497)" fill="#978510"/>
+                              </svg>                              
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <!-- Menú desplegable (a implementar) -->
+                        
+                          
+                        <a class="nav-link" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="43.574" height="17.34" viewBox="0 0 43.574 17.34">
+                            <g id="Grupo_3013" data-name="Grupo 3013" transform="translate(-1532.5 -62)">
+                              <line id="Línea_535" data-name="Línea 535" x2="43.574" transform="translate(1532.5 62.5)" fill="none" stroke="#978510" stroke-width="1"/>
+                              <line id="Línea_536" data-name="Línea 536" x2="43.574" transform="translate(1532.5 70.67)" fill="none" stroke="#978510" stroke-width="1"/>
+                              <line id="Línea_537" data-name="Línea 537" x2="16.34" transform="translate(1559.734 78.84)" fill="none" stroke="#978510" stroke-width="1"/>
+                            </g>
+                          </svg>Menú
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+  <!-- Sección con imagen de fondo, nombre de empresa y formulario -->
+<section class="hero-section">
+    <div class="container">
+        <div class="hero-text">
+            <h1 style="font-size: 200%;">INMO</h1>
+            <h1 style="font-size: 200%;">VALLEY</h1>
+            <p>Siempre a tu lado</p>
+        </div>
+        <form class="property-search-form">
+            <select class="form-control">
+                <option value="tipo">Estado</option>
+                <!-- Agrega más opciones aquí -->
+            </select>
+            <select class="form-control">
+                <option value="tipo">Tipo</option>
+                <!-- Agrega más opciones aquí -->
+            </select>
+            <select class="form-control">
+                <option value="tipo">Poblacion</option>
+                <!-- Agrega más opciones aquí -->
+            </select>
+            <select class="form-control">
+                <option value="tipo">Zona</option>
+                <!-- Agrega más opciones aquí -->
+            </select>
+            <select class="form-control">
+                <option value="tipo">Precio hasta</option>
+                <!-- Agrega más opciones aquí -->
+            </select>
+            <select class="form-control">
+                <option value="ubicacion">Precio desde</option>
+                <!-- Agrega más opciones aquí -->
+            </select>
+            <div class="button-container">
+                <button type="submit" class="boton-buscar" style="color: #ffffff;">
+                        <!-- ... Icono de búsqueda ... -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32.385" height="32.689" viewBox="0 0 32.385 32.689">
+                            <g id="Grupo_2990" data-name="Grupo 2990" transform="translate(-715.828 -305.178)">
+                              <line id="Línea_481" data-name="Línea 481" x2="4.679" y2="4.867" transform="translate(742.534 332.307)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="2"/>
+                              <circle id="Elipse_181" data-name="Elipse 181" cx="15.192" cy="15.192" r="15.192" transform="translate(716.828 306.178)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="2"/>
+                            </g>
+                        </svg>
+
+                    Buscar
+                </button>
+            </div>
+        </form>
+        <div class="boton-wrapper">
+            <div class="button-container">
+                <button type="button" class="boton-limpiar" style="color: #ffffff;">
+                        <!-- ... Icono de limpiar ... -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32.15" height="32.15" viewBox="0 0 32.15 32.15">
+                            <g id="eraser" transform="translate(-327.931 -361.644)">
+                              <path id="Trazado_4687" data-name="Trazado 4687" d="M353.241,378.625l-13.084,13.084a2.9,2.9,0,0,1-4.1,0l-6.279-6.279a2.9,2.9,0,0,1,0-4.1l17.838-17.838a2.9,2.9,0,0,1,4.1,0L358,369.772a2.9,2.9,0,0,1,0,4.1Z" transform="translate(0)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="2"/>
+                              <line id="Línea_485" data-name="Línea 485" x2="10.378" y2="10.378" transform="translate(339.017 372.093)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="2"/>
+                              <line id="Línea_486" data-name="Línea 486" x2="21.104" transform="translate(338.102 392.557)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="2"/>
+                            </g>
+                        </svg>
+                          
+                    Limpiar filtros
+                </button>
+            </div>
+            <div class="button-container">
+                <button type="button" class="boton-busqueda-avanzada" style="color: #ffffff;">
+                        <!-- ... Icono de búsqueda avanzada ... -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32.385" height="32.689" viewBox="0 0 32.385 32.689">
+                            <g id="advanced_search" data-name="advanced search" transform="translate(-833.791 -467.896)">
+                              <g id="Grupo_2107" data-name="Grupo 2107" transform="translate(840.96 475.37)">
+                                <path id="Trazado_4685" data-name="Trazado 4685" d="M1020.716,557.152v0Z" transform="translate(-1011.692 -548.128)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="2"/>
+                                <path id="Trazado_4686" data-name="Trazado 4686" d="M919.3,658.563h0Z" transform="translate(-910.281 -649.539)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="2"/>
+                              </g>
+                              <line id="Línea_484" data-name="Línea 484" x2="4.679" y2="4.867" transform="translate(860.497 495.025)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="2"/>
+                              <circle id="Elipse_182" data-name="Elipse 182" cx="15.192" cy="15.192" r="15.192" transform="translate(834.791 468.896)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="2"/>
+                            </g>
+                          </svg>
+                          
+                    Búsqueda avanzada                     
+                </button>
+        </div>
+        </div>
+    </div>
+</section>
+    <section class="background-section"  style=" height:33em; padding:20%; background-image: url('Assets/image_banner.jpg');">
+        <div class="container"> 
+            <center>
+                <h1 style="color: var(--inmovalley-secundario);">Elige tu futuro</h1>
+                <svg xmlns="http://www.w3.org/2000/svg" width="78.448" height="78.449" viewBox="0 0 78.448 78.449">
+                    <g id="Grupo_3025" data-name="Grupo 3025" transform="translate(-2886.37 1218.652)">
+                      <path id="Trazado_5099" data-name="Trazado 5099" d="M3302.192-805.48l6.312-17.491H3304.3l-4.513,14.424-4.436-14.424h-4.309l6.236,17.491Z" transform="translate(-358.796 -350.827)" fill="#fff"/>
+                      <path id="Trazado_5112" data-name="Trazado 5112" d="M2886.37-1218.652v78.449h78.448v-78.449ZM2960.026-1145h-68.863l68.863-68.863Z" transform="translate(0)" fill="#978510" fill-rule="evenodd"/>
+                      <rect id="Rectángulo_1785" data-name="Rectángulo 1785" width="4.7" height="20.658" transform="translate(2906.051 -1206.082)" fill="#fff"/>
+                    </g>
+                  </svg>
+                  
+            </center>               
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card bg-gray" >
+                        <div class="card-body" style="padding: 20%; background-color:var(--inmovalley-primario);" >
+                            <h5 class="card-title" style="color: var(--inmovalley-secundario);">Pisos en Elche</h5>
+                            <p class="card-text" style="color: #ffffff;">20 propiedades disponibles</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card bg-gray">
+                        <div class="card-body" style="padding: 20%; background-color:var(--inmovalley-primario);">
+                            <h5 class="card-title" style="color: var(--inmovalley-secundario);">Chalets en Elche</h5>
+                            <p class="card-text" style="color: #ffffff;">43 propiedades disponibles</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card bg-gray" style="background-color:var(--inmovalley-primario);">
+                        <div class="card-body" style="padding: 20%; ">
+                            <h5 class="card-title" style="color: var(--inmovalley-secundario);" style="color: var(--inmovalley-secundario);">Apartamentos en Santa Paola</h5>
+                            <p class="card-text" style="color: #ffffff;">16 propiedades disponibles</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Propiedad del mes -->
+
+    <div class="container" style="padding:10%;">
+        <div class="row">
+          <!-- Columna para la imagen -->
+          <div class="col-md-6">
+            <div class="property-image">
+              <img src="Assets/property_month.jpg" alt="Propiedad del Mes" class="img-fluid">
+            </div>
+          </div>
+          <!-- Columna para la descripción -->
+          <div class="col-md-6">
+            <div class="property-description">
+              <h2>Propiedad del Mes</h2>
+              <p>
+                Piso en obra nueva ubicado en Elche - Huerto de Trabalon.
+                <br>
+                200m² construidos, 3 habitaciones, 3 baños y piscina.
+                <br>
+                Precio: 275,000€
+              </p>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <section class="background-section"  style="height:33em; padding:20%; background-image: url('Assets/image_background.jpg');">
+        <div class="container text-center">
+        <h2 class="text-white" style="padding:2%;">Vende tu propiedad con nosotros</h2>
+        <a href="#" class="btn" style="background-color: var(--inmovalley-secundario);">Quiero vender</a>
+        </div>
+    </section>
+
+    <section class="pt-5 pb-5" style="background-color: var(--inmovalley-primario); color:#ffffff;">
+        <div class="container">
+          <h2 class="text-center">Propiedades Destacadas</h2>
+          <div class="row">
+            <!-- Carta 1 -->
+            <div class="col-md-3">
+              <div class="card" style="background-color: var(--inmovalley-primario); color:#ffffff;">
+                <img src="Assets/property_1.jpg" alt="Propiedad 1" class="card-img-top">
+                <div class="card-body">
+                  <h5 class="card-title">Piso</h5>
+                  <p class="card-text">Obra nueva en Elche</p>
+                  <p class="card-text">Precio: 275,000€</p>
+                </div>
+              </div>
+            </div>
+            <!-- Carta 2 -->
+            <div class="col-md-3">
+              <div class="card" style="background-color: var(--inmovalley-primario); color:#ffffff;">
+                <img src="Assets/property_2.jpg" alt="Propiedad 1" class="card-img-top">
+                <div class="card-body" >
+                  <h5 class="card-title">Piso</h5>
+                  <p class="card-text">Obra nueva en Elche</p>
+                  <p class="card-text">Precio: 275,000€</p>
+                </div>
+              </div>
+            </div>
+            <!-- Carta 3 -->
+            <div class="col-md-3">
+              <div class="card" style="background-color: var(--inmovalley-primario); color:#ffffff;">
+                <img src="Assets/property_1.jpg"  alt="Propiedad 1" class="card-img-top">
+                <div class="card-body"  >
+                  <h5 class="card-title">Piso</h5>
+                  <p class="card-text">Obra nueva en Elche</p>
+                  <p class="card-text">Precio: 275,000€</p>
+                </div>
+              </div>
+            </div>
+            <!-- Carta 4 -->
+            <div class="col-md-3">
+              <div class="card" style="background-color: var(--inmovalley-primario); color:#ffffff;">
+                <img src="Assets/property_1.jpg"  alt="Propiedad 1" class="card-img-top">
+                <div class="card-body">
+                  <h5 class="card-title">Piso</h5>
+                  <p class="card-text">Obra nueva en Elche</p>
+                  <p class="card-text">Precio: 275,000€</p>
+                </div>
+              </div>
+            </div>
+
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    </section>
+
+    <section class="py-5" style="background-color: var(--inmovalley-primario); color:#ffffff;">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12 text-center">
+              <h2>Bienvenido a nuestra inmobiliaria</h2>
+              <p>Inmovalley fue fundada en Elche en el año 2005, dedicada a la intermediación inmobiliaria, contando sus componentes con más de veinte años de experiencia en el sector inmobiliario.</p>
+              <p>Desde su apertura, con una primera oficina en la C/ Filet de Fora en Elche (Alicante), la empresa se ha volcado en la gestión de compraventas y arrendamientos de inmuebles en Elche y sus alrededores. En estos años, la confianza de nuestros clientes así como la profesionalidad de nuestros asesores ha ido creciendo constantemente.</p>
+              <a href="#" class="btn" style="background-color: var(--inmovalley-secundario);">Más sobre nosotros</a>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-5">
+        <div class="container">
+          <div class="row">
+            <!-- Columna de texto vertical -->
+            <div class="col-md-3 texto-vertical">
+              <h3 class="vertical-text"><center>Últimas Noticias</center></h3>
+            </div>
+      
+            <!-- Columna de imágenes -->
+            <div class="col-md-9">
+              <div class="row">
+                <!-- Primera imagen -->
+                <div class="col-md-6">
+                  <div class="card mb-3">
+                    <img src="Assets/mews_1.jpg" alt="Imagen 1" class="card-img-top">
+                    <div class="card-body">
+                      <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                  </div>
+                </div>
+      
+                <!-- Segunda imagen -->
+                <div class="col-md-6">
+                  <div class="card mb-3">
+                    <img src="Assets/news_2.jpg" alt="Imagen 2" class="card-img-top">
+                    <div class="card-body">
+                      <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-5" style=" background-color: var(--inmovalley-secundario);">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <h2>Contacta con Nosotros</h2>
+              <form style="background-color: var(--inmovalley-secundario);">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="nombre" placeholder="Tu Nombre">
+                </div>
+                <div class="form-group">
+                  <input type="tel" class="form-control" id="telefono" placeholder="Tu Teléfono">
+                </div>
+                <div class="form-group">
+                  <input type="email" class="form-control" id="email" placeholder="Tu Email">
+                </div>
+                <div class="form-group">
+                  <textarea class="form-control" id="mensaje" rows="4" placeholder="Tu Mensaje"></textarea>
+                </div>
+                <div class="form-check">
+                  <input type="checkbox" class="form-check-input" id="terminos">
+                  <label class="form-check-label" for="terminos">Acepto los términos y condiciones</label>
+                </div>
+                <button type="submit" class="btn" style="background-color: var(--inmovalley-primario); color:#ffffff;">Enviar</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="text-light text-center" style="padding: 20%; ">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>INMOVALLEY</h1>
+                    <h1>Teléfono: 966 274 206</h1>
+                    <h1>Correo: info@inmovalley.com</h1>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script> 
+</body>
+</html>
